@@ -18,39 +18,40 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-99dp" />
 
+
+    <!--        android:onClick="saveCharacter"/>-->
+
     <ImageView
-        android:id="@+id/miron"
+        android:id="@+id/buton_miron"
         android:layout_width="180dp"
         android:layout_height="290dp"
         android:paddingTop="70dp"
+        app:layout_constraintLeft_toRightOf="@+id/buton_mos"
         android:src="@drawable/miron"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-29dp" />
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="36dp" />
 
-    <TextView
-        android:id="@+id/name_miron"
-        android:layout_width="90dp"
-        android:layout_height="25dp"
-        android:text="Name: Miron"
-        android:textColor="@color/black"
-        android:textSize="15dp"
-        android:textStyle="italic"
-        app:layout_constraintLeft_toRightOf="@+id/miron"
-        tools:layout_editor_absoluteY="86dp"
-        tools:ignore="MissingConstraints" />
-
-
-    <Button
-        android:id="@+id/vang"
+    <ImageView
+        android:id="@+id/buton_mos"
         android:layout_width="180dp"
         android:layout_height="290dp"
-        android:layout_marginLeft="204dp"
-        android:background="@drawable/button_effect"
         android:paddingTop="70dp"
-        app:layout_constraintLeft_toRightOf="@+id/miron"
+        android:src="@drawable/mos"
         tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-18dp"
         tools:layout_editor_absoluteY="36dp" />
-<!--        android:onClick="saveCharacter"/>-->
+
+    <ImageView
+        android:id="@+id/buton_vang"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:paddingTop="70dp"
+        app:layout_constraintLeft_toRightOf="@id/buton_miron"
+        android:src="@drawable/vang"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="442dp"
+        tools:layout_editor_absoluteY="36dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -59,10 +60,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vang"
+        app:layout_constraintTop_toBottomOf="@+id/buton_miron"
         android:id="@+id/activity_first_button" />
 
-
+    <Button
+        android:id="@+id/goBackButon"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="Back"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="345dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

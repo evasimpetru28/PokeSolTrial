@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
@@ -17,6 +18,7 @@ public class GameView extends SurfaceView implements Runnable{
     private Background background2;
     private ArrowUp arrowUp;
     private Paint paint;
+    static boolean switchActivity = false;
 
     public GameView(Context context, int screenX, int screenY) {
         super(context);
@@ -28,7 +30,7 @@ public class GameView extends SurfaceView implements Runnable{
         background2 = new Background(screenX, screenY, getResources());
         background2.x = screenX;
 
-        arrowUp = new ArrowUp(screenX, screenY, getResources());
+        arrowUp = new ArrowUp(screenX, screenY, getResources(), CharacterSelectActivity.avatar);
 
         paint = new Paint();
     }
@@ -43,13 +45,15 @@ public class GameView extends SurfaceView implements Runnable{
         }
     }
 
+
+
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
         if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
-            resume();
+            switchActivity = true;
             return true;
         }else {
-            pause();
+            resume();
         }
         return false;
     }

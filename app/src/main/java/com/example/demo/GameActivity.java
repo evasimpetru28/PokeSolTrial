@@ -2,6 +2,7 @@ package com.example.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 
@@ -19,6 +20,12 @@ public class GameActivity extends AppCompatActivity {
         gameView = new GameView(this, point.x, point.y);
 
         setContentView(gameView);
+
+        if(GameView.switchActivity) {
+            Intent intent = new Intent(this, CharacterSelectActivity.class);
+            startActivity(intent);
+        }
+
     }
 
     @Override

@@ -10,8 +10,8 @@ public class ArrowUp {
     int y = 0;
     Bitmap arrow;
 
-    ArrowUp(int screenX, int screenY, Resources res) {
-        arrow = BitmapFactory.decodeResource(res, R.drawable.arrow_up);
+    ArrowUp(int screenX, int screenY, Resources res, int id) {
+        arrow = BitmapFactory.decodeResource(res, id);
         arrow = Bitmap.createScaledBitmap(arrow, 100, 400, false);
     }
 
