@@ -12,6 +12,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
 
     Button switchToSecondActivity;
     Button goBack;
+    Button seeCatalogue;
     ImageView selectMiron;
     ImageView selectMos;
     ImageView selectVang;
@@ -22,18 +23,21 @@ public class CharacterSelectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_select);
 
+        seeCatalogue = findViewById(R.id.catalogue);
+        seeCatalogue.setVisibility(View.VISIBLE);
 
         selectMiron = findViewById(R.id.buton_miron);
         selectMiron.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectMiron.setImageDrawable(getResources().getDrawable(R.drawable.forest));
-
+                selectMiron.setImageDrawable(getResources().getDrawable(R.drawable.player));
+                switchToSecondActivity.setVisibility(View.VISIBLE);
                 avatar = R.drawable.miron;
 
                 selectVang.setVisibility(View.GONE);
                 selectMos.setVisibility(View.GONE);
                 goBack.setVisibility(View.VISIBLE);
+                seeCatalogue.setVisibility(View.GONE);
             }
         });
 
@@ -42,12 +46,13 @@ public class CharacterSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selectMos.setImageDrawable(getResources().getDrawable(R.drawable.mushroom));
-
+                switchToSecondActivity.setVisibility(View.VISIBLE);
                 avatar = R.drawable.mos;
 
                 selectMiron.setVisibility(View.GONE);
                 selectVang.setVisibility(View.GONE);
                 goBack.setVisibility(View.VISIBLE);
+                seeCatalogue.setVisibility(View.GONE);
             }
         });
 
@@ -56,12 +61,13 @@ public class CharacterSelectActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 selectVang.setImageDrawable(getResources().getDrawable(R.drawable.arrow_up));
-
+                switchToSecondActivity.setVisibility(View.VISIBLE);
                 avatar = R.drawable.vang;
 
                 selectMos.setVisibility(View.GONE);
                 selectMiron.setVisibility(View.GONE);
                 goBack.setVisibility(View.VISIBLE);
+                seeCatalogue.setVisibility(View.GONE);
             }
         });
 
@@ -73,21 +79,36 @@ public class CharacterSelectActivity extends AppCompatActivity {
                 selectVang.setImageDrawable(getResources().getDrawable(R.drawable.vang));
                 selectMos.setImageDrawable(getResources().getDrawable(R.drawable.mos));
                 selectMiron.setImageDrawable(getResources().getDrawable(R.drawable.miron));
+                switchToSecondActivity.setVisibility(View.GONE);
 
                 selectMiron.setVisibility(View.VISIBLE);
                 selectMos.setVisibility(View.VISIBLE);
                 selectVang.setVisibility(View.VISIBLE);
                 goBack.setVisibility(View.GONE);
+                seeCatalogue.setVisibility(View.VISIBLE);
             }
         });
 
+        seeCatalogue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchToCatalogue();
+            }
+        });
+
+
         switchToSecondActivity = findViewById(R.id.activity_first_button); // id pe ultimul buton din character select menu
+        switchToSecondActivity.setVisibility(View.GONE);
         switchToSecondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 switchActivities();
             }
         });
+    }
+
+    private void switchToCatalogue() {
+        startActivity(new Intent(this, CatalogueActivity.class));
     }
 
     private void switchActivities() {

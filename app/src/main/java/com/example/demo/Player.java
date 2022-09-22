@@ -15,6 +15,6 @@ public class Player {
 
     Player(int screenX, int screenY, Resources res, int avatar) {
         player = BitmapFactory.decodeResource(res, avatar);
-        player = Bitmap.createScaledBitmap(player, 200, 100, false);
+        player = Bitmap.createScaledBitmap(player, 290, 180, false);
     }
 }

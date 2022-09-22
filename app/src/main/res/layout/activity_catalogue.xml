@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/catalogue_bckg"
+    tools:context=".CatalogueActivity">
+
+    <TextView
+        android:id="@+id/ch_select_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Employees Catalogue"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-99dp" />
+
+<!--    Pagina 1   -->
+
+    <ImageView
+        android:id="@+id/buton_bianca"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:paddingTop="70dp"
+        android:src="@drawable/bianca"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <ImageView
+        android:id="@+id/buton_carolina"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:layout_marginLeft="44dp"
+        android:paddingTop="70dp"
+        android:src="@drawable/carolina"
+        app:layout_constraintLeft_toRightOf="@+id/buton_bianca"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <ImageView
+        android:id="@+id/buton_dorin"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:layout_marginLeft="52dp"
+        android:paddingTop="70dp"
+        android:src="@drawable/dorin"
+        app:layout_constraintLeft_toRightOf="@id/buton_carolina"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="36dp" />
+
+    <!--    Pagina 2   -->
+
+        <ImageView
+            android:id="@+id/buton_lipan"
+            android:layout_width="180dp"
+            android:layout_height="290dp"
+            android:paddingTop="70dp"
+            android:src="@drawable/lipan"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <ImageView
+            android:id="@+id/buton_lucian"
+            android:layout_width="180dp"
+            android:layout_height="290dp"
+            android:paddingTop="70dp"
+            android:src="@drawable/lucian"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toRightOf="@+id/buton_lipan"
+            tools:layout_editor_absoluteX="-18dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <ImageView
+            android:id="@+id/buton_popovici"
+            android:layout_width="180dp"
+            android:layout_height="290dp"
+            android:paddingTop="70dp"
+            app:layout_constraintLeft_toRightOf="@id/buton_lucian"
+            android:src="@drawable/popovici"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="442dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <!--    Pagina 3   -->
+
+        <ImageView
+            android:id="@+id/buton_srp"
+            android:layout_width="180dp"
+            android:layout_height="290dp"
+            android:paddingTop="70dp"
+            android:src="@drawable/srp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+        <ImageView
+            android:id="@+id/buton_tana"
+            android:layout_width="180dp"
+            android:layout_height="290dp"
+            android:paddingTop="70dp"
+            android:src="@drawable/tana"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintLeft_toRightOf="@+id/buton_srp"
+            tools:layout_editor_absoluteX="-18dp"
+            tools:layout_editor_absoluteY="36dp" />
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buton_carolina"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buton_carolina"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/goBackButon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Back"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="34dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
