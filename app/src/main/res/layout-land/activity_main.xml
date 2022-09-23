@@ -4,13 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/opening_screen"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/forest"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/opening_screen_wide" />
 
     <TextView
         android:id="@+id/splashScreen"

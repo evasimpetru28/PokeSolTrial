@@ -154,45 +154,40 @@
 
     <Button
         android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Next"
+        android:layout_width="138dp"
+        android:layout_height="48dp"
+        android:background="@drawable/next_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/previous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Previous"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:background="@drawable/previous_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.351" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/goBackButon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:textColor="@color/black"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="146dp"
+        android:layout_height="49dp"
+        android:background="@drawable/back_button"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/backToCharacterSelect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Character Select"
+        android:layout_width="155dp"
+        android:layout_height="54dp"
+        android:background="@drawable/menu_button"
         app:layout_constraintRight_toRightOf="@id/ch_select_title"
-        android:textColor="@color/black"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="557dp"
         tools:layout_editor_absoluteY="0dp" />
 
 

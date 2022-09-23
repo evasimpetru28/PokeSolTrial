@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/button_effect.xml" value="0.2025" />
         <entry key="app/src/main/res/layout-land/activity_game.xml" value="0.12708333333333333" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_battle.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_catalogue.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_ch_select.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1105072463768116" />
