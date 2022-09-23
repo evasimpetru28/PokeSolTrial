@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/catalogue_bckg"
+    android:background="@drawable/opening_screen"
     tools:context=".CatalogueActivity">
+
+    <!--    Pagina 1   -->
 
     <TextView
         android:id="@+id/ch_select_title"
@@ -13,13 +15,11 @@
         android:layout_height="match_parent"
         android:text="Employees Catalogue"
         android:textAlignment="center"
-        android:textColor="@color/design_default_color_primary"
+        android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-99dp" />
-
-<!--    Pagina 1   -->
+        tools:layout_editor_absoluteX="-132dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ImageView
         android:id="@+id/buton_bianca"
@@ -28,30 +28,71 @@
         android:paddingTop="70dp"
         android:src="@drawable/bianca"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/biance_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Bianca Enache"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/buton_bianca"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="57dp" />
 
     <ImageView
         android:id="@+id/buton_carolina"
         android:layout_width="180dp"
         android:layout_height="290dp"
-        android:layout_marginLeft="44dp"
         android:paddingTop="70dp"
         android:src="@drawable/carolina"
         app:layout_constraintLeft_toRightOf="@+id/buton_bianca"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/carolina_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Carolina Roșu"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/buton_carolina"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="268dp" />
 
     <ImageView
         android:id="@+id/buton_dorin"
         android:layout_width="180dp"
         android:layout_height="290dp"
-        android:layout_marginLeft="52dp"
         android:paddingTop="70dp"
         android:src="@drawable/dorin"
         app:layout_constraintLeft_toRightOf="@id/buton_carolina"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/dorin_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Dorin Tecuceanu"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/buton_dorin"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="57dp" />
 
     <!--    Pagina 2   -->
 
@@ -89,17 +130,17 @@
 
         <!--    Pagina 3   -->
 
-        <ImageView
-            android:id="@+id/buton_srp"
-            android:layout_width="180dp"
-            android:layout_height="290dp"
-            android:paddingTop="70dp"
-            android:src="@drawable/srp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="214dp"
-            tools:layout_editor_absoluteY="36dp" />
+    <ImageView
+        android:id="@+id/buton_srp"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:paddingTop="70dp"
+        android:src="@drawable/srp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="36dp" />
 
-        <ImageView
+    <ImageView
             android:id="@+id/buton_tana"
             android:layout_width="180dp"
             android:layout_height="290dp"
@@ -120,7 +161,6 @@
         app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buton_carolina"
         app:layout_constraintVertical_bias="0.351" />
 
     <Button
@@ -132,20 +172,28 @@
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buton_carolina"
         app:layout_constraintVertical_bias="0.351" />
 
     <Button
         android:id="@+id/goBackButon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:text="Back"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/backToCharacterSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Character Select"
+        app:layout_constraintRight_toRightOf="@id/ch_select_title"
+        android:textColor="@color/black"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="34dp" />
+        tools:layout_editor_absoluteX="557dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

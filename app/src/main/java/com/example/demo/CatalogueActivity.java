@@ -14,7 +14,8 @@ public class CatalogueActivity extends AppCompatActivity {
 
     Button next;
     Button previous;
-    Button goBack;
+    Button goBackToCatalogue;
+    Button goToCharacterSelect;
     ImageView bianca;
     ImageView carolina;
     ImageView dorin;
@@ -34,7 +35,8 @@ public class CatalogueActivity extends AppCompatActivity {
 
         next = findViewById(R.id.next);
         previous = findViewById(R.id.previous);
-        goBack = findViewById(R.id.goBackButon);
+        goBackToCatalogue = findViewById(R.id.goBackButon);
+        goToCharacterSelect = findViewById(R.id.backToCharacterSelect);
 
         bianca = findViewById(R.id.buton_bianca);
         carolina = findViewById(R.id.buton_carolina);
@@ -62,7 +64,7 @@ public class CatalogueActivity extends AppCompatActivity {
 
         next.setVisibility(View.VISIBLE);
         previous.setVisibility(View.GONE);
-        goBack.setVisibility(View.GONE);
+        goBackToCatalogue.setVisibility(View.GONE);
 
         bianca.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +72,9 @@ public class CatalogueActivity extends AppCompatActivity {
                 carolina.setVisibility(View.GONE);
                 dorin.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
             }
         });
 
@@ -80,7 +84,9 @@ public class CatalogueActivity extends AppCompatActivity {
                 bianca.setVisibility(View.GONE);
                 dorin.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
             }
         });
 
@@ -90,7 +96,9 @@ public class CatalogueActivity extends AppCompatActivity {
                 carolina.setVisibility(View.GONE);
                 bianca.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
             }
         });
 
@@ -100,7 +108,10 @@ public class CatalogueActivity extends AppCompatActivity {
                 lucian.setVisibility(View.GONE);
                 popovici.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
             }
         });
 
@@ -110,7 +121,10 @@ public class CatalogueActivity extends AppCompatActivity {
                 lipan.setVisibility(View.GONE);
                 popovici.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
             }
         });
 
@@ -120,7 +134,10 @@ public class CatalogueActivity extends AppCompatActivity {
                 lipan.setVisibility(View.GONE);
                 lucian.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
             }
         });
 
@@ -129,7 +146,9 @@ public class CatalogueActivity extends AppCompatActivity {
             public void onClick(View view) {
                 tana.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
             }
         });
 
@@ -138,7 +157,9 @@ public class CatalogueActivity extends AppCompatActivity {
             public void onClick(View view) {
                 srp.setVisibility(View.GONE);
 
-                goBack.setVisibility(View.VISIBLE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
             }
         });
 
@@ -163,6 +184,7 @@ public class CatalogueActivity extends AppCompatActivity {
 
                     srp.setVisibility(View.VISIBLE);
                     tana.setVisibility(View.VISIBLE);
+                    next.setVisibility(View.GONE);
                 }
 
                 previous.setVisibility(View.VISIBLE);
@@ -183,6 +205,7 @@ public class CatalogueActivity extends AppCompatActivity {
                     lipan.setVisibility(View.GONE);
                     lucian.setVisibility(View.GONE);
                     popovici.setVisibility(View.GONE);
+                    previous.setVisibility(View.GONE);
                 }
                 else if (currentPage == 2) {
                     lipan.setVisibility(View.VISIBLE);
@@ -198,15 +221,53 @@ public class CatalogueActivity extends AppCompatActivity {
 
         });
 
-        goBack.setOnClickListener(new View.OnClickListener() {
+        goBackToCatalogue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToCharacterSelect();
+                goToCatalogue();
+            }
+        });
+
+        goToCharacterSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBackToCharacterSelect();
             }
         });
     }
 
-    private void goToCharacterSelect() {
+    private void goToCatalogue() {
+        if (currentPage == 1) {
+            bianca.setVisibility(View.VISIBLE);
+            carolina.setVisibility(View.VISIBLE);
+            dorin.setVisibility(View.VISIBLE);
+
+            goBackToCatalogue.setVisibility(View.GONE);
+            goToCharacterSelect.setVisibility(View.VISIBLE);
+            next.setVisibility(View.VISIBLE);
+        }
+        if (currentPage == 2) {
+            lipan.setVisibility(View.VISIBLE);
+            lucian.setVisibility(View.VISIBLE);
+            popovici.setVisibility(View.VISIBLE);
+
+            goBackToCatalogue.setVisibility(View.GONE);
+            goToCharacterSelect.setVisibility(View.VISIBLE);
+
+            next.setVisibility(View.VISIBLE);
+            previous.setVisibility(View.VISIBLE);
+        }
+        if (currentPage == 3) {
+            srp.setVisibility(View.VISIBLE);
+            goToCharacterSelect.setVisibility(View.VISIBLE);
+            tana.setVisibility(View.VISIBLE);
+
+            goBackToCatalogue.setVisibility(View.GONE);
+            previous.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void goBackToCharacterSelect() {
         startActivity(new Intent(this, CharacterSelectActivity.class));
     }
 }
