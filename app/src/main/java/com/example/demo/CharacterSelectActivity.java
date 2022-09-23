@@ -30,7 +30,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
         selectMiron.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectMiron.setImageDrawable(getResources().getDrawable(R.drawable.player));
                 switchToSecondActivity.setVisibility(View.VISIBLE);
                 avatar = R.drawable.miron;
 
@@ -45,7 +44,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
         selectMos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectMos.setImageDrawable(getResources().getDrawable(R.drawable.mushroom));
                 switchToSecondActivity.setVisibility(View.VISIBLE);
                 avatar = R.drawable.mos;
 
@@ -60,7 +58,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
         selectVang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectVang.setImageDrawable(getResources().getDrawable(R.drawable.arrow_up));
                 switchToSecondActivity.setVisibility(View.VISIBLE);
                 avatar = R.drawable.vang;
 
@@ -76,9 +73,6 @@ public class CharacterSelectActivity extends AppCompatActivity {
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                selectVang.setImageDrawable(getResources().getDrawable(R.drawable.vang));
-                selectMos.setImageDrawable(getResources().getDrawable(R.drawable.mos));
-                selectMiron.setImageDrawable(getResources().getDrawable(R.drawable.miron));
                 switchToSecondActivity.setVisibility(View.GONE);
 
                 selectMiron.setVisibility(View.VISIBLE);

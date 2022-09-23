@@ -8,24 +8,9 @@
 
     <ImageView
         android:id="@+id/forest"
-        android:layout_width="4000px"
-        android:layout_height="3000px"
-        android:src="@drawable/background" />
-
-    <TextView
-    android:id="@+id/AppName"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
-    android:text="PokeSol"
-    android:textAlignment="center"
-    android:textColor="@color/cardview_light_background"
-    android:textStyle="bold"
-    android:textSize="30sp"
-
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginTop="90dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/opening_screen_wide" />
 
     <TextView
         android:id="@+id/splashScreen"
@@ -35,16 +20,28 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="180dp"
-        android:text="This is main Activity"
-
+        android:text="enable e.ntertainment"
         android:textAlignment="center"
-        android:textColor="@color/gray"
-        android:textSize="18sp" />
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        />
+
 
     <ImageView
-        android:id="@+id/player"
-        android:layout_width="107dp"
-        android:layout_height="200dp"
-        android:src="@drawable/player" />
+        android:id="@+id/start_buton"
+        android:layout_width="152dp"
+        android:layout_height="135dp"
+        android:paddingTop="70dp"
+        android:src="@drawable/start_button"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="214dp"
+        android:layout_marginLeft="360dp"
+        android:layout_marginTop="140dp"
+        tools:layout_editor_absoluteY="36dp" />
 
 </FrameLayout>

@@ -23,12 +23,12 @@
         android:id="@+id/buton_miron"
         android:layout_width="180dp"
         android:layout_height="290dp"
+        android:layout_marginLeft="110dp"
         android:paddingTop="70dp"
-        app:layout_constraintLeft_toRightOf="@+id/buton_mos"
         android:src="@drawable/miron"
+        app:layout_constraintLeft_toRightOf="@+id/buton_mos"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="214dp"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_editor_absoluteY="40dp" />
 
     <ImageView
         android:id="@+id/buton_mos"
@@ -37,19 +37,19 @@
         android:paddingTop="70dp"
         android:src="@drawable/mos"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-18dp"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="40dp" />
 
     <ImageView
         android:id="@+id/buton_vang"
         android:layout_width="180dp"
         android:layout_height="290dp"
+        android:layout_marginLeft="110dp"
         android:paddingTop="70dp"
-        app:layout_constraintLeft_toRightOf="@id/buton_miron"
         android:src="@drawable/vang"
+        app:layout_constraintLeft_toRightOf="@id/buton_miron"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="442dp"
-        tools:layout_editor_absoluteY="36dp" />
+        tools:layout_editor_absoluteY="40dp" />
 
     <Button
         android:layout_width="wrap_content"
