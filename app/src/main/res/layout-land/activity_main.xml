@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/forest"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/AppName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        android:text="eSol Go"
-        android:textAlignment="center"
+    <ImageView
+        android:id="@+id/forest"
+        android:layout_width="4000px"
+        android:layout_height="3000px"
+        android:src="@drawable/background" />
 
-        android:textColor="@color/cardview_light_background"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+    <TextView
+    android:id="@+id/AppName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:text="PokeSol"
+    android:textAlignment="center"
+    android:textColor="@color/cardview_light_background"
+    android:textStyle="bold"
+    android:textSize="30sp"
+
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="90dp"/>
 
     <TextView
         android:id="@+id/splashScreen"
@@ -36,4 +41,10 @@
         android:textColor="@color/gray"
         android:textSize="18sp" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/player"
+        android:layout_width="107dp"
+        android:layout_height="200dp"
+        android:src="@drawable/player" />
+
+</FrameLayout>
