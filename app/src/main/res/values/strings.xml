@@ -4,34 +4,34 @@
     <string name="vang_question">What will Vang do?</string>
     <string name="mos_question">What will Mos do?</string>
 
-    <string name="miron_action1">Act 1</string>
-    <string name="miron_action2">Act 2</string>
-    <string name="miron_action3">act3</string>
-    <string name="miron_action4">act 4</string>
+    <string name="miron_action1">Rescriem toata aplicatia</string>
+    <string name="miron_action2">Un compot? O coacazata?</string>
+    <string name="miron_action3">E gata in cateva zile</string>
+    <string name="miron_action4">Zi repede 2 la a 10-a</string>
 
-    <string name="mos_action1">act 1</string>
-    <string name="mos_action2">act 2</string>
-    <string name="mos_action3">act 3</string>
-    <string name="mos_action4">act 4</string>
+    <string name="mos_action1">Unde sunt indecsii?</string>
+    <string name="mos_action2">How cute, but its wrong</string>
+    <string name="mos_action3">Aoleu cat dureaza query-ul</string>
+    <string name="mos_action4">Pai brooo!</string>
 
-    <string name="vang_action1">act 1</string>
-    <string name="vang_action2">act 2</string>
-    <string name="vang_action3">act 3</string>
-    <string name="vang_action4">act 4</string>
+    <string name="vang_action1">Mai folosesti Windows?</string>
+    <string name="vang_action2">Degustare de VIM-uri</string>
+    <string name="vang_action3">Da-l in **** mea</string>
+    <string name="vang_action4">Kubernetes</string>
 
-    <string name="miron_uses_1">Miron has used act1!</string>
-    <string name="miron_uses_2">Miron has used act2!</string>
-    <string name="miron_uses_3">Miron has used act3!</string>
-    <string name="miron_uses_4">Miron has used act4!</string>
+    <string name="miron_uses_1">Miron used Rescriem toata aplicatia </string>
+    <string name="miron_uses_2">Miron used Un compot? O coacazata?</string>
+    <string name="miron_uses_3">Miron used E gata in cateva zile</string>
+    <string name="miron_uses_4">Miron used Zi repede 2 la a 10-a</string>
 
-    <string name="mos_uses_1">Mos has used act1!</string>
-    <string name="mos_uses_2">Mos has used act2!</string>
-    <string name="mos_uses_3">Mos has used act3!</string>
-    <string name="mos_uses_4">Mos has used act4!</string>
+    <string name="mos_uses_1">Mos used Unde sunt indecsii?</string>
+    <string name="mos_uses_2">Mos used How cute, but its wrong</string>
+    <string name="mos_uses_3">Mos used Aoleu cat dureaza query-ul</string>
+    <string name="mos_uses_4">Mos used Pai brooo!</string>
 
-    <string name="vang_uses_1">Vang has used act1!</string>
-    <string name="vang_uses_2">Vang has used act2!</string>
-    <string name="vang_uses_3">Vang has used act3!</string>
-    <string name="vang_uses_4">Vang has used act4!</string>
+    <string name="vang_uses_1">Vang used Mai folosesti Windows?</string>
+    <string name="vang_uses_2">Vang used Degustare de VIM-uri</string>
+    <string name="vang_uses_3">Vang used Da-l in **** mea</string>
+    <string name="vang_uses_4">Vang used Kubernetes</string>
 
 </resources>

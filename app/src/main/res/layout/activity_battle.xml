@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,12 +10,13 @@
     <TextView
         android:id="@+id/main_question"
         android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
         android:background="@color/white"
         android:gravity="center"
         android:scrollbarSize="20dp"
-        android:text="What will you do?"
+        android:text="Will you fight?"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -28,6 +29,18 @@
         />
 
     <ImageView
+        android:id="@+id/enemy"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:paddingTop="70dp"
+        android:layout_marginTop="-110px"
+        android:layout_marginLeft="1200px"
+        android:src="@drawable/bianca"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="40dp"
+        />
+
+    <ImageView
         android:layout_width="1000px"
         android:id="@+id/player_life"
         android:layout_height="30dp"
@@ -36,19 +49,24 @@
 
 
     <ImageView
-        android:id="@+id/enemy_life"
         android:layout_width="1000px"
+        android:id="@+id/enemy_life"
         android:layout_height="30dp"
-        android:layout_marginRight="500px"
+        android:layout_marginLeft="1100px"
+        android:layout_marginTop="0px"
+        android:paddingLeft = "500px"
         android:background="@color/blue"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="478dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:ignore="MissingConstraints" />
+
+
+
 
     <Button
         android:id="@+id/fight"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="1500px"
+        android:layout_marginTop="755px"
         android:layout_marginBottom="32dp"
         android:text="Fight"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -94,6 +112,8 @@
         android:id="@+id/run"
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="900px"
+        android:layout_marginTop="755px"
         android:layout_marginBottom="32dp"
         android:text="Run"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,10 +125,11 @@
     <TextView
         android:id="@+id/miron_question"
         android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="10dp"
+        android:layout_height="50dp"
         android:background="@color/white"
         android:gravity="center"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
         android:scrollbarSize="20dp"
         android:text="@string/miron_question"
         android:textAlignment="center"
@@ -125,8 +146,8 @@
         android:id="@+id/player_miron"
         android:layout_width="180dp"
         android:layout_height="290dp"
-        android:layout_marginLeft="50dp"
         android:paddingTop="70dp"
+        android:layout_marginTop="-60px"
         android:src="@drawable/miron"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="40dp" />
@@ -134,12 +155,139 @@
     <TextView
         android:id="@+id/miron_used1"
         android:layout_width="300dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:gravity="center"
         android:scrollbarSize="20dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
         android:text="@string/miron_uses_1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/miron_used2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
+        android:text="@string/miron_uses_2"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/miron_used3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
+        android:text="@string/miron_uses_3"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/miron_used4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
+        android:text="@string/miron_uses_4"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/mesage"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="650px"
+        android:layout_marginTop="400px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:text="You win!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/player_turn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:text="It's enemy's turn..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/enemy_action"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="0px"
+        android:layout_marginTop="820px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:text="Bianca line"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -250,7 +398,9 @@
     <Button
         android:id="@+id/action1Miron"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="900px"
+        android:layout_marginTop="695px"
         android:layout_marginBottom="52dp"
         android:text="@string/miron_action1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -262,7 +412,9 @@
     <Button
         android:id="@+id/action2Miron"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="1500px"
+        android:layout_marginTop="695px"
         android:layout_marginBottom="52dp"
         android:text="@string/miron_action2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -274,9 +426,11 @@
     <Button
         android:id="@+id/action3Miron"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="4dp"
         android:text="@string/miron_action3"
+        android:layout_marginLeft="900px"
+        android:layout_marginTop="825px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -286,8 +440,10 @@
     <Button
         android:id="@+id/action4Miron"
         android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="4dp"
+        android:layout_marginLeft="1500px"
+        android:layout_marginTop="825px"
         android:text="@string/miron_action4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.969"
@@ -295,4 +451,4 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
