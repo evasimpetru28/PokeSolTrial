@@ -36,6 +36,9 @@ public class BattleActivity extends AppCompatActivity {
     ImageView main_miron;
 
     TextView miron_act1_used;
+    ImageView player_health;
+
+    int diff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,7 @@ public class BattleActivity extends AppCompatActivity {
         miron_act1_used.setVisibility(View.GONE);
 
         main_miron = findViewById(R.id.player_miron);
+        player_health = findViewById(R.id.player_life);
 
         if (CharacterSelectActivity.avatar == R.drawable.miron) {
             main_miron.setVisibility(View.VISIBLE);
@@ -119,6 +123,7 @@ public class BattleActivity extends AppCompatActivity {
                 actionMiron4.setVisibility(View.GONE);
                 miron_q.setVisibility(View.GONE);
                 miron_act1_used.setVisibility(View.VISIBLE);
+                deleteHealthBar();
 
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -164,6 +169,12 @@ public class BattleActivity extends AppCompatActivity {
     private void goBackToGame() {
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
+    }
+
+    private void deleteHealthBar() {
+        diff = (new Random().nextInt(4) + 1) * 100;
+        findViewById(R.id.player_life).getLayoutParams().width -= 1000;
+        System.out.println(diff);
     }
 
 
