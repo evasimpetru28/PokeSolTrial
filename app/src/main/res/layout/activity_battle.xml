@@ -7,48 +7,92 @@
     android:background="@drawable/battle_screen_wide"
     tools:context=".BattleActivity">
 
-
     <TextView
-        android:id="@+id/vang_question"
+        android:id="@+id/main_question"
         android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:scrollbarSize="20dp"
-        android:text="What will Vang do?"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="46dp" />
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:id="@+id/mos_question"
-        android:background="@color/white"
-        android:gravity="center"
-        android:scrollbarSize="20dp"
-        android:text="What will Mos do?"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="165dp" />
-
-    <TextView
-        android:id="@+id/miron_question"
-        android:layout_width="300dp"
-        android:layout_height="86dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="10dp"
         android:background="@color/white"
         android:gravity="center"
         android:scrollbarSize="20dp"
-        android:text="What will Miron do?"
+        android:text="What will you do?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <Button
+        android:id="@+id/fight"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="Fight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/vang_question"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:gravity="center"-->
+<!--        android:scrollbarSize="20dp"-->
+<!--        android:text="What will Vang do?"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="325dp"-->
+<!--        tools:layout_editor_absoluteY="46dp" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:id="@+id/mos_question"-->
+<!--        android:background="@color/white"-->
+<!--        android:gravity="center"-->
+<!--        android:scrollbarSize="20dp"-->
+<!--        android:text="What will Mos do?"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="16dp"-->
+<!--        tools:layout_editor_absoluteY="165dp" />-->
+
+    <Button
+        android:id="@+id/run"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:text="Run"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/miron_question"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:text="@string/miron_question"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -59,7 +103,37 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints" />
 
-<!--    <Button-->
+    <ImageView
+        android:id="@+id/player_miron"
+        android:layout_width="180dp"
+        android:layout_height="290dp"
+        android:layout_marginLeft="50dp"
+        android:paddingTop="70dp"
+        android:src="@drawable/miron"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <TextView
+        android:id="@+id/miron_used1"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:scrollbarSize="20dp"
+        android:text="@string/miron_uses_1"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    <Button-->
 <!--        android:id="@+id/action1Vang"-->
 <!--        android:layout_width="200dp"-->
 <!--        android:layout_height="50dp"-->
@@ -160,7 +234,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="52dp"
-        android:text="Actiune 1 miron"
+        android:text="@string/miron_action1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -172,7 +246,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="52dp"
-        android:text="Actiune 2 miron"
+        android:text="@string/miron_action2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -184,7 +258,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="4dp"
-        android:text="Actiune 3 miron"
+        android:text="@string/miron_action3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -196,7 +270,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="4dp"
-        android:text="Actiune 4 miron"
+        android:text="@string/miron_action4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Demo</string>
+    <string name="miron_question">What will Miron do?</string>
+    <string name="vang_question">What will Vang do?</string>
+    <string name="mos_question">What will Mos do?</string>
+
+    <string name="miron_action1">Act 1</string>
+    <string name="miron_action2">Act 2</string>
+    <string name="miron_action3">act3</string>
+    <string name="miron_action4">act 4</string>
+
+    <string name="mos_action1">act 1</string>
+    <string name="mos_action2">act 2</string>
+    <string name="mos_action3">act 3</string>
+    <string name="mos_action4">act 4</string>
+
+    <string name="vang_action1">act 1</string>
+    <string name="vang_action2">act 2</string>
+    <string name="vang_action3">act 3</string>
+    <string name="vang_action4">act 4</string>
+
+    <string name="miron_uses_1">Miron has used act1!</string>
+    <string name="miron_uses_2">Miron has used act2!</string>
+    <string name="miron_uses_3">Miron has used act3!</string>
+    <string name="miron_uses_4">Miron has used act4!</string>
+
+    <string name="mos_uses_1">Mos has used act1!</string>
+    <string name="mos_uses_2">Mos has used act2!</string>
+    <string name="mos_uses_3">Mos has used act3!</string>
+    <string name="mos_uses_4">Mos has used act4!</string>
+
+    <string name="vang_uses_1">Vang has used act1!</string>
+    <string name="vang_uses_2">Vang has used act2!</string>
+    <string name="vang_uses_3">Vang has used act3!</string>
+    <string name="vang_uses_4">Vang has used act4!</string>
+
 </resources>
