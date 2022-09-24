@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,8 +11,8 @@
 
     <TextView
         android:id="@+id/ch_select_title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="715dp"
+        android:layout_height="531dp"
         android:text="Employees Catalogue"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -24,132 +24,144 @@
     <ImageView
         android:id="@+id/buton_bianca"
         android:layout_width="180dp"
-        android:layout_height="290dp"
-        android:paddingTop="70dp"
-        android:src="@drawable/bianca"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="49dp" />
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/bianca" />
 
-    <TextView
-        android:id="@+id/biance_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Bianca Enache"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/buton_bianca"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp" />
+    <ImageView
+        android:id="@+id/buton_bianca_hidden"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="80dp"
+        android:src="@drawable/bianca_silhouette" />
 
     <ImageView
         android:id="@+id/buton_carolina"
         android:layout_width="180dp"
-        android:layout_height="290dp"
-        android:paddingTop="70dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="350dp"
         android:src="@drawable/carolina"
-        app:layout_constraintLeft_toRightOf="@+id/buton_bianca"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="49dp" />
+        app:layout_constraintLeft_toRightOf="@+id/buton_bianca" />
 
-    <TextView
-        android:id="@+id/carolina_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Carolina Roșu"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/buton_carolina"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="268dp" />
+    <ImageView
+        android:id="@+id/buton_carolina_hidden"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/carolina_silhouette"
+        app:layout_constraintLeft_toRightOf="@+id/buton_bianca" />
 
     <ImageView
         android:id="@+id/buton_dorin"
         android:layout_width="180dp"
-        android:layout_height="290dp"
-        android:paddingTop="70dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="630dp"
         android:src="@drawable/dorin"
-        app:layout_constraintLeft_toRightOf="@id/buton_carolina"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="49dp" />
+        app:layout_constraintLeft_toRightOf="@id/buton_carolina" />
 
-    <TextView
-        android:id="@+id/dorin_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Dorin Tecuceanu"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/buton_dorin"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="57dp" />
+    <ImageView
+        android:id="@+id/buton_dorin_hidden"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="630dp"
+        android:src="@drawable/dorin_silhouette"
+        app:layout_constraintLeft_toRightOf="@id/buton_carolina" />
 
-    <!--    Pagina 2   -->
+<!--    &lt;!&ndash;    Pagina 2   &ndash;&gt;-->
 
-        <ImageView
-            android:id="@+id/buton_lipan"
-            android:layout_width="180dp"
-            android:layout_height="290dp"
-            android:paddingTop="70dp"
-            android:src="@drawable/lipan"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="214dp"
-            tools:layout_editor_absoluteY="36dp" />
+    <ImageView
+        android:id="@+id/buton_lipan"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/lipan"
+        android:layout_marginLeft="80dp"/>
 
-        <ImageView
-            android:id="@+id/buton_lucian"
-            android:layout_width="180dp"
-            android:layout_height="290dp"
-            android:paddingTop="70dp"
-            android:src="@drawable/lucian"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintLeft_toRightOf="@+id/buton_lipan"
-            tools:layout_editor_absoluteX="-18dp"
-            tools:layout_editor_absoluteY="36dp" />
+    <ImageView
+        android:id="@+id/buton_lipan_hidden"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/lipan_silhouette"
+        android:layout_marginLeft="80dp"/>
 
-        <ImageView
-            android:id="@+id/buton_popovici"
-            android:layout_width="180dp"
-            android:layout_height="290dp"
-            android:paddingTop="70dp"
-            app:layout_constraintLeft_toRightOf="@id/buton_lucian"
-            android:src="@drawable/popovici"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="442dp"
-            tools:layout_editor_absoluteY="36dp" />
+    <ImageView
+        android:id="@+id/buton_lucian"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/lucian"
+        app:layout_constraintLeft_toRightOf="@+id/buton_lipan"/>
 
-        <!--    Pagina 3   -->
+    <ImageView
+        android:id="@+id/buton_lucian_hidden"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/lucian_silhouette"
+        app:layout_constraintLeft_toRightOf="@+id/buton_lipan"/>
+
+    <ImageView
+        android:id="@+id/buton_popovici"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="630dp"
+        app:layout_constraintLeft_toRightOf="@id/buton_lucian"
+        android:src="@drawable/popovici" />
+
+    <ImageView
+        android:id="@+id/buton_popovici_hidden"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="630dp"
+        app:layout_constraintLeft_toRightOf="@id/buton_lucian"
+        android:src="@drawable/popovici_silhouette" />
+
+<!--    &lt;!&ndash;    Pagina 3   &ndash;&gt;-->
 
     <ImageView
         android:id="@+id/buton_srp"
         android:layout_width="180dp"
-        android:layout_height="290dp"
-        android:paddingTop="70dp"
-        android:src="@drawable/srp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:layout_height="250dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/srp" />
 
     <ImageView
-            android:id="@+id/buton_tana"
-            android:layout_width="180dp"
-            android:layout_height="290dp"
-            android:paddingTop="70dp"
-            android:src="@drawable/tana"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintLeft_toRightOf="@+id/buton_srp"
-            tools:layout_editor_absoluteX="-18dp"
-            tools:layout_editor_absoluteY="36dp" />
+        android:id="@+id/buton_srp_hidden"
+        android:layout_width="180dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/srp_silhouette" />
+
+    <ImageView
+        android:id="@+id/buton_tana"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/tana"
+        app:layout_constraintLeft_toRightOf="@+id/buton_srp" />
+
+    <ImageView
+        android:id="@+id/buton_tana_hidden"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/tana_silhouette"
+        app:layout_constraintLeft_toRightOf="@+id/buton_srp" />
 
 
     <Button
@@ -157,20 +169,16 @@
         android:layout_width="138dp"
         android:layout_height="48dp"
         android:background="@drawable/next_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginTop="335dp"
+        android:layout_marginLeft="450dp"/>
 
     <Button
         android:id="@+id/previous"
         android:layout_width="134dp"
         android:layout_height="48dp"
         android:background="@drawable/previous_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_marginTop="335dp"
+        android:layout_marginLeft="300dp"/>
 
     <Button
         android:id="@+id/goBackButon"
@@ -191,4 +199,4 @@
         tools:layout_editor_absoluteY="0dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
