@@ -39,8 +39,8 @@ public class BattleActivity extends AppCompatActivity {
     TextView final_msj;
     boolean invalidateGame = false;
 
-//    int enemy = GameActivity.enemyId;
-    int enemy = R.drawable.carolina;
+    int enemy = GameActivity.enemyId;
+//    int enemy = R.drawable.carolina;
 
     TextView miron_act1_used;
     TextView miron_act2_used;
