@@ -2,6 +2,7 @@ package com.example.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -470,6 +471,7 @@ public class BattleActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @SuppressLint("ResourceType")
     private void deleteHealthBar() {
         diff = (new Random().nextInt(4) + 1) * 100;
 //        System.out.println(findViewById(R.id.player_life).getLayoutParams().width);
@@ -483,6 +485,39 @@ public class BattleActivity extends AppCompatActivity {
             curret_life_player = 0;
         }
         if (curret_life_player == 0) {
+            if (enemy == R.drawable.bianca) {
+                CatalogueActivity.biancaFound = true;
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_bianca_hidden).setVisibility(View.GONE);
+            } else if (enemy == R.drawable.carolina) {
+                CatalogueActivity.carolinaFound = true;
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_carolina_hidden).setVisibility(View.GONE);
+            } else if (enemy == R.drawable.dorin) {
+                CatalogueActivity.dorinFound = true;
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_dorin_hidden).setVisibility(View.GONE);
+
+            } else if (enemy == R.drawable.lipan) {
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_lipan_hidden).setVisibility(View.GONE);
+
+                CatalogueActivity.lipanFound = true;
+
+            } else if (enemy == R.drawable.lucian) {
+                CatalogueActivity.lucianFound = true;
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_lucian_hidden).setVisibility(View.GONE);
+
+            } else if (enemy == R.drawable.popovici) {
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_popovici_hidden).setAlpha(0);
+
+                CatalogueActivity.popoviciFound = true;
+            } else if (enemy == R.drawable.tana) {
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_tana_hidden).setAlpha(0);
+
+                CatalogueActivity.tanaFound = true;
+            } else if (enemy == R.drawable.srp) {
+                findViewById(R.layout.activity_battle).findViewById(R.id.buton_srp_hidden).setAlpha(0);
+
+                CatalogueActivity.srpFound = true;
+            }
+
             player_health.setVisibility(View.GONE);
             TextView tv1 = (TextView) findViewById(R.id.mesage);
             tv1.setText("You lost!");

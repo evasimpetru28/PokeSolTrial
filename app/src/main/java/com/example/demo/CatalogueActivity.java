@@ -237,9 +237,14 @@ public class CatalogueActivity extends AppCompatActivity {
                     findViewById(R.id.buton_popovici_hidden).setVisibility(View.GONE);
 
                     srp.setVisibility(View.VISIBLE);
-                    findViewById(R.id.buton_srp_hidden).setVisibility(View.VISIBLE);
+                    if (!tanaFound) {
+                        findViewById(R.id.buton_srp_hidden).setVisibility(View.VISIBLE);
+                    }
+
                     tana.setVisibility(View.VISIBLE);
-                    findViewById(R.id.buton_tana_hidden).setVisibility(View.VISIBLE);
+                    if (!tanaFound) {
+                        findViewById(R.id.buton_tana_hidden).setVisibility(View.VISIBLE);
+                    }
                     next.setVisibility(View.GONE);
                 }
 

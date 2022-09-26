@@ -106,7 +106,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
     }
 
     private void switchActivities() {
-        Intent switchActivityIntent = new Intent(this, BattleActivity.class); // trebuie schimbat cu game activity
+        Intent switchActivityIntent = new Intent(this, GameActivity.class); // trebuie schimbat cu game activity
         startActivity(switchActivityIntent);
     }
 
