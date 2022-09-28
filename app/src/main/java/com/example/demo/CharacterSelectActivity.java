@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -22,6 +23,9 @@ public class CharacterSelectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ch_select);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         seeCatalogue = findViewById(R.id.catalogue);
         seeCatalogue.setVisibility(View.VISIBLE);
@@ -106,7 +110,7 @@ public class CharacterSelectActivity extends AppCompatActivity {
     }
 
     private void switchActivities() {
-        Intent switchActivityIntent = new Intent(this, BattleActivity.class); // trebuie schimbat cu game activity
+        Intent switchActivityIntent = new Intent(this, GameActivity.class); // trebuie schimbat cu game activity
         startActivity(switchActivityIntent);
     }
 

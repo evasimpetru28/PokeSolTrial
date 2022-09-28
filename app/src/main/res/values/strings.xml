@@ -1,4 +1,8 @@
 <resources>
+
+    <string name="will_you_fight">Will you fight?</string>
+    <string name="enemy">Enemy</string>
+    <string name="enemy_turn">It\'s enemy\'s turn..</string>
     <string name="app_name">Demo</string>
     <string name="miron_question">What will Miron do?</string>
     <string name="vang_question">What will Vang do?</string>

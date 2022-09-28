@@ -38,9 +38,9 @@ public class GameActivity extends AppCompatActivity {
 //        System.out.println("s a intrattttttttttttttttttttttt");
 
         if (touches == randomTouches) {
-            int rand = (new Random()).nextInt((7 - 0 + 1) + 1);
+            int rand = (new Random()).nextInt((7 - 0 + 1));
             enemyId = listOfCharacters.get(rand);
-            startActivity(new Intent(this, CharacterSelectActivity.class));
+            startActivity(new Intent(this, BattleActivity.class));
         }
 
         int action = MotionEventCompat.getActionMasked(event);
