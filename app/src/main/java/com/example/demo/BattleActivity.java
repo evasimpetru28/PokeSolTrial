@@ -16,10 +16,10 @@ import java.util.Random;
 
 public class BattleActivity extends AppCompatActivity {
 
-    Button actionMiron1, actionMiron2, actionMiron3, actionMiron4, fight_btn, run_btn;
+    Button action1, action2, action3, action4, fight_btn, run_btn;
     TextView main_q, final_msj;
     int random_run;
-    ImageView main_miron, player_health, enemy_health, enemy_image;
+    ImageView main_player, player_health, enemy_health, enemy_image;
     int diff, current_life_player, current_life_enemy;
 
     Enemy currentEnemy;
@@ -50,25 +50,57 @@ public class BattleActivity extends AppCompatActivity {
         fight_btn = findViewById(R.id.fight);
         run_btn = findViewById(R.id.run);
 
+        action1 = findViewById(R.id.action1Miron);
+        action2 = findViewById(R.id.action2Miron);
+        action3 = findViewById(R.id.action3Miron);
+        action4 = findViewById(R.id.action4Miron);
 
-        actionMiron1 = findViewById(R.id.action1Miron);
-        actionMiron2 = findViewById(R.id.action2Miron);
-        actionMiron3 = findViewById(R.id.action3Miron);
-        actionMiron4 = findViewById(R.id.action4Miron);
-        actionMiron1.setVisibility(View.GONE);
-        actionMiron2.setVisibility(View.GONE);
-        actionMiron3.setVisibility(View.GONE);
-        actionMiron4.setVisibility(View.GONE);
+        if (CharacterSelectActivity.avatar == R.drawable.miron) {
+            action1.setText(R.string.miron_action1);
+            action2.setText(R.string.miron_action2);
+            action3.setText(R.string.miron_action3);
+            action4.setText(R.string.miron_action4);
+        }
 
-        main_miron = findViewById(R.id.player_miron);
+        if (CharacterSelectActivity.avatar == R.drawable.vang) {
+            action1.setText(R.string.vang_action1);
+            action2.setText(R.string.vang_action2);
+            action3.setText(R.string.vang_action3);
+            action4.setText(R.string.vang_action4);
+        }
+
+        if (CharacterSelectActivity.avatar == R.drawable.mos) {
+            action1.setText(R.string.mos_action1);
+            action2.setText(R.string.mos_action2);
+            action3.setText(R.string.mos_action3);
+            action4.setText(R.string.mos_action4);
+        }
+
+        action1.setVisibility(View.GONE);
+        action2.setVisibility(View.GONE);
+        action3.setVisibility(View.GONE);
+        action4.setVisibility(View.GONE);
+
+
+        main_player = findViewById(R.id.player_miron);
         player_health = findViewById(R.id.player_life);
         enemy_health = findViewById(R.id.enemy_life);
 
         final_msj = findViewById(R.id.mesage);
         final_msj.setVisibility(View.GONE);
 
+        main_player.setVisibility(View.VISIBLE);
+
         if (CharacterSelectActivity.avatar == R.drawable.miron) {
-            main_miron.setVisibility(View.VISIBLE);
+            main_player.setImageResource(R.drawable.miron);
+        }
+
+        if (CharacterSelectActivity.avatar == R.drawable.vang) {
+            main_player.setImageResource(R.drawable.vang);
+        }
+
+        if (CharacterSelectActivity.avatar == R.drawable.mos) {
+            main_player.setImageResource(R.drawable.mos);
         }
 
         run_btn.setOnClickListener(new View.OnClickListener() {
@@ -82,15 +114,22 @@ public class BattleActivity extends AppCompatActivity {
                     fight_btn.setVisibility(View.GONE);
                     run_btn.setVisibility(View.GONE);
 
-                    if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                    action1.setVisibility(View.VISIBLE);
+                    action2.setVisibility(View.VISIBLE);
+                    action3.setVisibility(View.VISIBLE);
+                    action4.setVisibility(View.VISIBLE);
 
+                    if (CharacterSelectActivity.avatar == R.drawable.miron) {
                         main_q.setText(R.string.miron_question);
-                        actionMiron1.setVisibility(View.VISIBLE);
-                        actionMiron2.setVisibility(View.VISIBLE);
-                        actionMiron3.setVisibility(View.VISIBLE);
-                        actionMiron4.setVisibility(View.VISIBLE);
                     }
 
+                    if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                        main_q.setText(R.string.mos_question);
+                    }
+
+                    if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                        main_q.setText(R.string.vang_question);
+                    }
                 }
             }
         });
@@ -98,29 +137,49 @@ public class BattleActivity extends AppCompatActivity {
         fight_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (CharacterSelectActivity.avatar == R.drawable.miron) {
-                    fight_btn.setVisibility(View.GONE);
-                    run_btn.setVisibility(View.GONE);
-                    main_q.setText(R.string.miron_question);
 
-                    actionMiron1.setVisibility(View.VISIBLE);
-                    actionMiron2.setVisibility(View.VISIBLE);
-                    actionMiron3.setVisibility(View.VISIBLE);
-                    actionMiron4.setVisibility(View.VISIBLE);
+                fight_btn.setVisibility(View.GONE);
+                run_btn.setVisibility(View.GONE);
+
+                action1.setVisibility(View.VISIBLE);
+                action2.setVisibility(View.VISIBLE);
+                action3.setVisibility(View.VISIBLE);
+                action4.setVisibility(View.VISIBLE);
+
+                if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                    main_q.setText(R.string.miron_question);
                 }
 
+                if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                    main_q.setText(R.string.mos_question);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                    main_q.setText(R.string.vang_question);
+                }
             }
         });
 
-        actionMiron1.setOnClickListener(new View.OnClickListener() {
+        action1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionMiron1.setVisibility(View.GONE);
-                actionMiron2.setVisibility(View.GONE);
-                actionMiron3.setVisibility(View.GONE);
-                actionMiron4.setVisibility(View.GONE);
 
-                main_q.setText(R.string.miron_uses_1);
+                action1.setVisibility(View.GONE);
+                action2.setVisibility(View.GONE);
+                action3.setVisibility(View.GONE);
+                action4.setVisibility(View.GONE);
+
+                if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                    main_q.setText(R.string.miron_uses_1);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                    main_q.setText(R.string.mos_uses_1);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                    main_q.setText(R.string.vang_uses_1);
+                }
 
                 deleteEnemyHealthBar();
 
@@ -146,26 +205,48 @@ public class BattleActivity extends AppCompatActivity {
                 Handler handler2 = new Handler();
                 handler2.postDelayed(new Runnable() {
                     public void run() {
-                        actionMiron1.setVisibility(View.VISIBLE);
-                        actionMiron2.setVisibility(View.VISIBLE);
-                        actionMiron3.setVisibility(View.VISIBLE);
-                        actionMiron4.setVisibility(View.VISIBLE);
-                        main_q.setText(R.string.miron_question);
+                        action1.setVisibility(View.VISIBLE);
+                        action2.setVisibility(View.VISIBLE);
+                        action3.setVisibility(View.VISIBLE);
+                        action4.setVisibility(View.VISIBLE);
+
+                        if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                            main_q.setText(R.string.miron_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                            main_q.setText(R.string.mos_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                            main_q.setText(R.string.vang_question);
+                        }
+
                     }
                 }, 6000);
 
             }
         });
 
-        actionMiron2.setOnClickListener(new View.OnClickListener() {
+        action2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionMiron1.setVisibility(View.GONE);
-                actionMiron2.setVisibility(View.GONE);
-                actionMiron3.setVisibility(View.GONE);
-                actionMiron4.setVisibility(View.GONE);
+                action1.setVisibility(View.GONE);
+                action2.setVisibility(View.GONE);
+                action3.setVisibility(View.GONE);
+                action4.setVisibility(View.GONE);
 
-                main_q.setText(R.string.miron_uses_2);
+                if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                    main_q.setText(R.string.miron_uses_2);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                    main_q.setText(R.string.mos_uses_2);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                    main_q.setText(R.string.vang_uses_2);
+                }
 
                 deleteEnemyHealthBar();
 
@@ -190,26 +271,47 @@ public class BattleActivity extends AppCompatActivity {
                 Handler handler2 = new Handler();
                 handler2.postDelayed(new Runnable() {
                     public void run() {
-                        actionMiron1.setVisibility(View.VISIBLE);
-                        actionMiron2.setVisibility(View.VISIBLE);
-                        actionMiron3.setVisibility(View.VISIBLE);
-                        actionMiron4.setVisibility(View.VISIBLE);
-                        main_q.setText(R.string.miron_question);
+                        action1.setVisibility(View.VISIBLE);
+                        action2.setVisibility(View.VISIBLE);
+                        action3.setVisibility(View.VISIBLE);
+                        action4.setVisibility(View.VISIBLE);
 
+                        if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                            main_q.setText(R.string.miron_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                            main_q.setText(R.string.mos_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                            main_q.setText(R.string.vang_question);
+                        }
                     }
                 }, 6000);
             }
         });
 
-        actionMiron3.setOnClickListener(new View.OnClickListener() {
+        action3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionMiron1.setVisibility(View.GONE);
-                actionMiron2.setVisibility(View.GONE);
-                actionMiron3.setVisibility(View.GONE);
-                actionMiron4.setVisibility(View.GONE);
 
-                main_q.setText(R.string.miron_uses_3);
+                action1.setVisibility(View.GONE);
+                action2.setVisibility(View.GONE);
+                action3.setVisibility(View.GONE);
+                action4.setVisibility(View.GONE);
+
+                if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                    main_q.setText(R.string.miron_uses_3);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                    main_q.setText(R.string.mos_uses_3);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                    main_q.setText(R.string.vang_uses_3);
+                }
 
                 deleteEnemyHealthBar();
 
@@ -234,26 +336,47 @@ public class BattleActivity extends AppCompatActivity {
                 Handler handler2 = new Handler();
                 handler2.postDelayed(new Runnable() {
                     public void run() {
-                        actionMiron1.setVisibility(View.VISIBLE);
-                        actionMiron2.setVisibility(View.VISIBLE);
-                        actionMiron3.setVisibility(View.VISIBLE);
-                        actionMiron4.setVisibility(View.VISIBLE);
-                        main_q.setText(R.string.miron_question);
+                        action1.setVisibility(View.VISIBLE);
+                        action2.setVisibility(View.VISIBLE);
+                        action3.setVisibility(View.VISIBLE);
+                        action4.setVisibility(View.VISIBLE);
+
+                        if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                            main_q.setText(R.string.miron_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                            main_q.setText(R.string.mos_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                            main_q.setText(R.string.vang_question);
+                        }
+
                     }
                 }, 6000);
             }
         });
 
-        actionMiron4.setOnClickListener(new View.OnClickListener() {
+        action4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                actionMiron1.setVisibility(View.GONE);
-                actionMiron2.setVisibility(View.GONE);
-                actionMiron3.setVisibility(View.GONE);
-                actionMiron4.setVisibility(View.GONE);
+                action1.setVisibility(View.GONE);
+                action2.setVisibility(View.GONE);
+                action3.setVisibility(View.GONE);
+                action4.setVisibility(View.GONE);
 
-                main_q.setText(R.string.miron_uses_4);
+                if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                    main_q.setText(R.string.miron_uses_4);
+                }
 
+                if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                    main_q.setText(R.string.mos_uses_4);
+                }
+
+                if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                    main_q.setText(R.string.vang_uses_4);
+                }
                 deleteEnemyHealthBar();
 
                 Handler handler = new Handler();
@@ -277,11 +400,23 @@ public class BattleActivity extends AppCompatActivity {
                 Handler handler2 = new Handler();
                 handler2.postDelayed(new Runnable() {
                     public void run() {
-                        actionMiron1.setVisibility(View.VISIBLE);
-                        actionMiron2.setVisibility(View.VISIBLE);
-                        actionMiron3.setVisibility(View.VISIBLE);
-                        actionMiron4.setVisibility(View.VISIBLE);
-                        main_q.setText(R.string.miron_question);
+                        action1.setVisibility(View.VISIBLE);
+                        action2.setVisibility(View.VISIBLE);
+                        action3.setVisibility(View.VISIBLE);
+                        action4.setVisibility(View.VISIBLE);
+
+                        if (CharacterSelectActivity.avatar == R.drawable.miron) {
+                            main_q.setText(R.string.miron_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.mos) {
+                            main_q.setText(R.string.mos_question);
+                        }
+
+                        if (CharacterSelectActivity.avatar == R.drawable.vang) {
+                            main_q.setText(R.string.vang_question);
+                        }
+
                     }
                 }, 6000);
             }

@@ -54,13 +54,13 @@ public class EnemyManagement {
                     "Vara ispitelor"));
 
     static List<Enemy> listOfEnemies = new ArrayList<>(
-            List.of(new Enemy("bianca", R.drawable.bianca, biancaLines, false),
-                    new Enemy("carolina", R.drawable.carolina, carolinaLines, false),
-                    new Enemy("dorin", R.drawable.dorin, dorinLines, false),
-                    new Enemy("lipan", R.drawable.lipan, lipanLines, false),
-                    new Enemy("lucian", R.drawable.lucian, lucianLines, false),
-                    new Enemy("popovici", R.drawable.popovici, popoviciLines, false),
-                    new Enemy("srp", R.drawable.srp, srpLines, false),
-                    new Enemy("tana", R.drawable.tana, tanaLines, false))
+            List.of(new Enemy("Bianca", R.drawable.bianca, biancaLines, false),
+                    new Enemy("Carolina", R.drawable.carolina, carolinaLines, false),
+                    new Enemy("Dorin", R.drawable.dorin, dorinLines, false),
+                    new Enemy("Lipan", R.drawable.lipan, lipanLines, false),
+                    new Enemy("Lucian", R.drawable.lucian, lucianLines, false),
+                    new Enemy("Popovici", R.drawable.popovici, popoviciLines, false),
+                    new Enemy("SRP", R.drawable.srp, srpLines, false),
+                    new Enemy("Tana", R.drawable.tana, tanaLines, false))
     );
 }

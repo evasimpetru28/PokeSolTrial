@@ -17,6 +17,7 @@ public class CatalogueActivity extends AppCompatActivity {
     ImageView bianca, carolina, dorin, lipan, lucian, popovici, srp, tana, last;
     float lastDiff;
     int currentPage = 1;
+    boolean employee_details = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,107 +77,136 @@ public class CatalogueActivity extends AppCompatActivity {
         goBackToCatalogue.setVisibility(View.GONE);
 
         bianca.setOnClickListener(view -> {
-            carolina.setVisibility(View.GONE);
-            findViewById(R.id.buton_bianca_hidden).setVisibility(View.GONE);
-            dorin.setVisibility(View.GONE);
-            findViewById(R.id.buton_dorin_hidden).setVisibility(View.GONE);
+            if (findViewById(R.id.buton_bianca_hidden).getVisibility() == View.GONE) {
+                carolina.setVisibility(View.GONE);
+                findViewById(R.id.buton_carolina_hidden).setVisibility(View.GONE);
+                dorin.setVisibility(View.GONE);
+                findViewById(R.id.buton_dorin_hidden).setVisibility(View.GONE);
 
-            last = null;
+                last = null;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            next.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+            }
         });
 
         carolina.setOnClickListener(view -> {
-            bianca.setVisibility(View.GONE);
-            findViewById(R.id.buton_bianca_hidden).setVisibility(View.GONE);
-            dorin.setVisibility(View.GONE);
-            findViewById(R.id.buton_dorin_hidden).setVisibility(View.GONE);
+            if (findViewById(R.id.buton_carolina_hidden).getVisibility() == View.GONE && employee_details == true) {
+                bianca.setVisibility(View.GONE);
+                findViewById(R.id.buton_bianca_hidden).setVisibility(View.GONE);
+                dorin.setVisibility(View.GONE);
+                findViewById(R.id.buton_dorin_hidden).setVisibility(View.GONE);
 
-            carolina.setX(carolina.getX() - 700);
-            lastDiff = 700;
-            last = carolina;
+                employee_details = false;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            next.setVisibility(View.GONE);
+                carolina.setX(carolina.getX() - 700);
+                lastDiff = 700;
+                last = carolina;
+
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+            }
         });
 
         dorin.setOnClickListener(view -> {
-            carolina.setVisibility(View.GONE);
-            findViewById(R.id.buton_carolina_hidden).setVisibility(View.GONE);
-            bianca.setVisibility(View.GONE);
-            findViewById(R.id.buton_bianca_hidden).setVisibility(View.GONE);
+            if (findViewById(R.id.buton_dorin_hidden).getVisibility() == View.GONE && employee_details == true) {
+                carolina.setVisibility(View.GONE);
+                findViewById(R.id.buton_carolina_hidden).setVisibility(View.GONE);
+                bianca.setVisibility(View.GONE);
+                findViewById(R.id.buton_bianca_hidden).setVisibility(View.GONE);
 
-            dorin.setX(dorin.getX() - 1420);
-            lastDiff = 1420;
-            last = dorin;
+                dorin.setX(dorin.getX() - 1420);
+                lastDiff = 1420;
+                last = dorin;
+                employee_details = false;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            next.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+            }
         });
 
         lipan.setOnClickListener(view -> {
-            lucian.setVisibility(View.GONE);
-            popovici.setVisibility(View.GONE);
+            if (findViewById(R.id.buton_lipan_hidden).getVisibility() == View.GONE) {
+                lucian.setVisibility(View.GONE);
+                findViewById(R.id.buton_lucian_hidden).setVisibility(View.GONE);
+                popovici.setVisibility(View.GONE);
+                findViewById(R.id.buton_popovici_hidden).setVisibility(View.GONE);
 
-            last = null;
+                last = null;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            next.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+            }
         });
 
         lucian.setOnClickListener(view -> {
-            lipan.setVisibility(View.GONE);
-            popovici.setVisibility(View.GONE);
+            if (findViewById(R.id.buton_lucian_hidden).getVisibility() == View.GONE && employee_details == true) {
+                lipan.setVisibility(View.GONE);
+                findViewById(R.id.buton_lipan_hidden).setVisibility(View.GONE);
+                popovici.setVisibility(View.GONE);
+                findViewById(R.id.buton_popovici_hidden).setVisibility(View.GONE);
 
-            lucian.setX(lucian.getX() - 700);
-            lastDiff = 700;
-            last = lucian;
+                lucian.setX(lucian.getX() - 700);
+                lastDiff = 700;
+                last = lucian;
+                employee_details = false;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            next.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+            }
         });
 
         popovici.setOnClickListener(view -> {
-            lipan.setVisibility(View.GONE);
-            lucian.setVisibility(View.GONE);
+            if (findViewById(R.id.buton_popovici_hidden).getVisibility() == View.GONE && employee_details == true) {
+                lipan.setVisibility(View.GONE);
+                findViewById(R.id.buton_lipan_hidden).setVisibility(View.GONE);
+                lucian.setVisibility(View.GONE);
+                findViewById(R.id.buton_lucian_hidden).setVisibility(View.GONE);
 
-            popovici.setX(popovici.getX() - 1420);
-            lastDiff = 1420;
-            last = popovici;
+                popovici.setX(popovici.getX() - 1420);
+                lastDiff = 1420;
+                last = popovici;
+                employee_details = false;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            next.setVisibility(View.GONE);
-            previous.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                next.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
+            }
         });
 
         srp.setOnClickListener(view -> {
-            tana.setVisibility(View.GONE);
+            if (findViewById(R.id.buton_srp_hidden).getVisibility() == View.GONE) {
+                tana.setVisibility(View.GONE);
+                findViewById(R.id.buton_tana_hidden).setVisibility(View.GONE);
 
-            last = null;
+                last = null;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            previous.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
+            }
         });
 
         tana.setOnClickListener(view -> {
-            srp.setVisibility(View.GONE);
-            findViewById(R.id.buton_srp_hidden).setVisibility(View.GONE);
+            if (findViewById(R.id.buton_tana_hidden).getVisibility() == View.GONE && employee_details == true) {
+                srp.setVisibility(View.GONE);
+                findViewById(R.id.buton_srp_hidden).setVisibility(View.GONE);
 
-            tana.setX(tana.getX() - 700);
-            lastDiff = 700;
-            last = tana;
+                tana.setX(tana.getX() - 700);
+                lastDiff = 700;
+                last = tana;
+                employee_details = false;
 
-            goBackToCatalogue.setVisibility(View.VISIBLE);
-            goToCharacterSelect.setVisibility(View.GONE);
-            previous.setVisibility(View.GONE);
+                goBackToCatalogue.setVisibility(View.VISIBLE);
+                goToCharacterSelect.setVisibility(View.GONE);
+                previous.setVisibility(View.GONE);
+            }
         });
 
         next.setOnClickListener(new View.OnClickListener() {
@@ -304,7 +334,9 @@ public class CatalogueActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (last != null) {
+                    employee_details = true;
                     last.setX(last.getX() + lastDiff);
+                    last = null;
                 }
 
                 goToCatalogue();
